@@ -7,7 +7,7 @@ import cv2
 def callback(data):
     try:
        bridge = CvBridge()
-       img = bridge.imgmsg_to_cv2(data, "32FC1")
+       img = bridge.imgmsg_to_cv2(data,desired_encoding="passthrough")
 
     except CvBridgeError as e:
         print(e)
